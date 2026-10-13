@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="description" content="Calculadora sencilla para sumar, restar, multiplicar y dividir.">
+  <title>Calculadora sencilla</title>
+  <link rel="stylesheet" href="style.css">
+  <script src="script.js" defer></script>
+</head>
+<body>
+  <main class="page">
+    <section class="calculator" aria-label="Calculadora">
+      <header class="calculator-header">
+        <div class="calculator-icon" aria-hidden="true">±</div>
+        <div>
+          <h1>Calculadora</h1>
+          <p>Simple, rápida y directa</p>
+        </div>
+      </header>
+
+      <div class="display" aria-live="polite" aria-atomic="true">
+        <div id="previous-operation" class="previous-operation"></div>
+        <output id="current-display" class="current-display" aria-label="Resultado">0</output>
+      </div>
+
+      <div class="keypad" aria-label="Teclas de la calculadora">
+        <button type="button" class="key key-function" data-action="clear" aria-label="Borrar todo">AC</button>
+        <button type="button" class="key key-function" data-action="backspace" aria-label="Borrar último dígito">⌫</button>
+        <button type="button" class="key key-function" data-action="sign" aria-label="Cambiar signo">±</button>
+        <button type="button" class="key key-operator" data-operator="/" aria-label="Dividir">÷</button>
+
+        <button type="button" class="key" data-number="7">7</button>
+        <button type="button" class="key" data-number="8">8</button>
+        <button type="button" class="key" data-number="9">9</button>
+        <button type="button" class="key key-operator" data-operator="*" aria-label="Multiplicar">×</button>
+
+        <button type="button" class="key" data-number="4">4</button>
+        <button type="button" class="key" data-number="5">5</button>
+        <button type="button" class="key" data-number="6">6</button>
+        <button type="button" class="key key-operator" data-operator="-" aria-label="Restar">−</button>
+
+        <button type="button" class="key" data-number="1">1</button>
+        <button type="button" class="key" data-number="2">2</button>
+        <button type="button" class="key" data-number="3">3</button>
+        <button type="button" class="key key-operator" data-operator="+" aria-label="Sumar">+</button>
+
+        <button type="button" class="key key-zero" data-number="0">0</button>
+        <button type="button" class="key" data-action="decimal" aria-label="Punto decimal">.</button>
+        <button type="button" class="key key-equals" data-action="equals" aria-label="Obtener resultado">=</button>
+      </div>
+
+      <footer class="calculator-footer">También puedes usar el teclado de tu computadora.</footer>
+    </section>
+  </main>
+</body>
+</html>
